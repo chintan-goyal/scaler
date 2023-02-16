@@ -1,23 +1,19 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
+import java.util.*;
 
-class LargestNumberComparator implements Comparator<Integer>{
-    public int compare(Integer a, Integer b){
-        String ab = a.toString()+b.toString();
-        String ba = b.toString()+a.toString();
-        if(Double.parseDouble(ab) > Double.parseDouble(ba)){
+class LargestNumberComparator implements Comparator<Integer> {
+    public int compare(Integer a, Integer b) {
+        String ab = a.toString() + b.toString();
+        String ba = b.toString() + a.toString();
+        if (Double.parseDouble(ab) > Double.parseDouble(ba)) {
             return -1;
-        }
-        else if (a == b){
+        } else if (a == b) {
             return 0;
-        }
-        else {
+        } else {
             return 1;
         }
     }
 }
+
 class Solution {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public void printArrayList(ArrayList<Integer> a) {
@@ -275,7 +271,7 @@ class Solution {
         for (int i = l - 1; i >= 0; i--) {
             res = (res % B) + (multiple10 * A[i] % B);
             res = res % B;
-            multiple10 = multiple10%B * 10;
+            multiple10 = multiple10 % B * 10;
         }
         System.out.println(res);
         return (int) res;
@@ -284,27 +280,26 @@ class Solution {
     public String largestNumber(final int[] A) {
         String re = "";
         Integer[] a = new Integer[A.length];
-        for(int i =  0;i<A.length;i++){
+        for (int i = 0; i < A.length; i++) {
             a[i] = A[i];
         }
 
-        Arrays.sort(a,new LargestNumberComparator());
+        Arrays.sort(a, new LargestNumberComparator());
         boolean flag = false;
-        for(int i =  0;i<A.length;i++){
-            if (!flag){
-                if (a[i]==0){}
-                else{
+        for (int i = 0; i < A.length; i++) {
+            if (!flag) {
+                if (a[i] == 0) {
+                } else {
                     flag = true;
                     re += a[i].toString();
-               }
+                }
 
-            }
-            else{
+            } else {
                 re += a[i].toString();
             }
         }
 //        System.out.println(re);
-        if(re == ""){
+        if (re == "") {
             re = "0";
         }
         System.out.println(re);
@@ -313,35 +308,111 @@ class Solution {
     }
 
     public int[] sortColors19_HW_1(int[] A) {
-        int countRed = 0, countWhite = 0, countBlue= 0, idx = 0;
+        int countRed = 0, countWhite = 0, countBlue = 0, idx = 0;
         //getting count of all
-        for(int i = 0; i<A.length; i++){
-            switch (A[i]){
+        for (int i = 0; i < A.length; i++) {
+            switch (A[i]) {
                 case 0:
-                    countRed+= 1;
+                    countRed += 1;
                     break;
                 case 1:
-                    countWhite+= 1;
+                    countWhite += 1;
                     break;
                 default:
-                    countBlue+= 1;
+                    countBlue += 1;
             }
         }
 
-        for(int red = 0;red<countRed;red++){
+        for (int red = 0; red < countRed; red++) {
             A[red] = 0;
 
         }
-        for(int white = countRed;white<countRed+countWhite;white++){
+        for (int white = countRed; white < countRed + countWhite; white++) {
             A[white] = 1;
         }
-        for(int blue = countRed+countWhite;blue<A.length;blue++){
+        for (int blue = countRed + countWhite; blue < A.length; blue++) {
             A[blue] = 2;
         }
         return A;
     }
 
+    public int LongestSubArrayZeroSum22_1(int[] A) {
+        int res = 0, maxLength = 0;
+        double sum = 0;
+        HashMap<Double, ArrayList<Integer>> commsum = new HashMap<>();
+        for (int i = 0; i < A.length; i++) {
+            sum += A[i];
+            if (sum == 0) {
+                if (i + 1 > maxLength) {
+                    maxLength += i + 1;
+                }
 
+            } else {
+                if (commsum.get(sum) != null) {
+                    ArrayList<Integer> val = commsum.get(sum);
+                    int l = val.size();
+                    if (l == 1) {
+                        val.add(i);
+                    } else {
+                        val.set(1, i);
+                    }
+                    if (val.get(1) - val.get(0) > maxLength) {
+                        maxLength = val.get(1) - val.get(0);
+                    }
+                } else {
+                    ArrayList<Integer> newval = new ArrayList<>();
+                    newval.add(i);
+                    commsum.put(sum, newval);
+                }
+            }
+
+        }
+
+//        System.out.println(maxLength);
+        return maxLength;
+    }
+
+    public int[][] rowToColumnZero11_HW_5(int[][] A) {
+        int m = A.length, n = A[0].length;
+        boolean row[] = new boolean[m];
+        boolean col[] = new boolean[n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (A[i][j] == 0) {
+                    row[i] = true;
+                    col[j] = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+            if (row[i] == true) {
+                for (int j = 0; j < n; j++) {
+                    A[i][j] = 0;
+                }
+            }
+        }
+        for (int j = 0; j < n; j++) {
+            if (col[j] == true) {
+                for (int i = 0; i < m; i++) {
+                    A[i][j] = 0;
+                }
+            }
+        }
+        return A;
+    }
+
+    public void printFrom1toA_23_4(int A) {
+        if(A==1) {
+            System.out.print("1");
+        }
+        else{
+            printFrom1toA_23_4(A-1);
+            System.out.print(" ");
+            System.out.print(A);
+        }
+
+    }
 
 }
 
@@ -352,6 +423,12 @@ class Assignments {
 //        System.out.println((-40) % 7);
         ArrayList<ArrayList<Integer>> input_2d = new ArrayList(Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(7, 8, 9)));
         int[] input_arr = new int[]{3, 30, 34, 5, 9};
+        boolean row[] = new boolean[2];
+        x.printFrom1toA_23_4(77);
+        System.out.println();
+
+//        System.out.println();
+//        x.LongestSubArrayZeroSum22_1(new int[]{5, -3, 2, 1, 0});
 //        int[] input_arr = new int[]{1,2,3,4,5,6,7,8,9};
 //        x.rotatemat(input_2d);
 //        x.specialIndex15_3(input_arr);
@@ -367,7 +444,12 @@ class Assignments {
 
 //        x.modArray18_2(new int[]{ 8, 2, 5, 6, 7, 6, 2, 6, 2 }, 3);
 //        x.largestNumber(input_arr);
+//        HashMap<Integer,List<Integer>> hm = new HashMap<>();
+//        hm.put(0, Arrays.asList(0,1));
+//        System.out.println(hm.get(2));
+//        List<Integer> newval = hm.get(2) != null?Arrays.asList(2):;
+
         char tst = 97;
-        System.out.println(tst);
+//        System.out.println(tst);
     }
 }
