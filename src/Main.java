@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
-class Solution {
+class Solution2 {
 
     public int[][] solve(int[] A,int B,int C) {
         int[][] res = new int[B][C];
@@ -129,7 +126,7 @@ class Solution {
 class HelloWorld {
     public static void main(String[] args) {
 
-        Solution sol = new Solution();
+        Solution2 sol = new Solution2();
 
 
 //        sol.solve(new int[]{1,2,3},1,3);

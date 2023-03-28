@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fcec7fb-88f9-43c9-b864-abb22322394f" name="Changes" comment="Assignment update">
-      <change afterPath="$PROJECT_DIR$/src/TestAss.java" afterDir="false" />
+    <list default="true" id="1a3885b8-e2b3-411a-90e8-888a10237559" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scaler/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scaler/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scaler/Solution.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,15 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Assignments">
-    <configuration name="Assignments (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Assignments (3)">
+    <configuration name="Assignments (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignments" />
+      <module name="Scaler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Assignments (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignments" />
       <module name="Scaler" />
       <method v="2">
@@ -59,44 +70,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HelloWorld" />
+      <module name="Scaler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testing" />
+      <module name="Scaler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Assignments (3)" />
+        <item itemvalue="Application.testing" />
         <item itemvalue="Application.Assignments" />
-        <item itemvalue="Application.Assignments (1)" />
+        <item itemvalue="Application.HelloWorld" />
+        <item itemvalue="Application.Assignments (2)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2fcec7fb-88f9-43c9-b864-abb22322394f" name="Changes" comment="" />
+      <changelist id="1a3885b8-e2b3-411a-90e8-888a10237559" name="Changes" comment="" />
       <created>1674020363722</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674020363722</updated>
     </task>
-    <task id="LOCAL-00001" summary="Assignment update">
-      <created>1675617567390</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675617567390</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Assignment update">
-      <created>1676295346112</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1676295346112</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Assignment update">
-      <created>1676561526364</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1676561526364</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,29 +116,20 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Assignment update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment update" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Assignments.java</url>
-          <line>794</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Assignments.java</url>
-          <line>759</line>
-          <option name="timeStamp" value="10" />
+          <line>726</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="value" />
-      </pinned-members>
-    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="A.charAt(i)" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
