@@ -1,4 +1,12 @@
+
+
 import java.util.*;
+class Interval {
+    int start;
+    int end;
+    Interval() { start = 0; end = 0; }
+    Interval(int s, int e) { start = s; end = e; }
+}
 
 class LargestNumberComparator implements Comparator<Integer> {
     public int compare(Integer a, Integer b) {
@@ -18,16 +26,18 @@ class Solution {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public void printArrayList(ArrayList<Integer> a) {
         for (int x : a) {
-            System.out.println(x);
+            System.out.print(x + " ");
         }
+        System.out.println();
     }
 
     public void printArray(int[] A) {
         System.out.println("Printing the list");
         for (int x : A
         ) {
-            System.out.println(x);
+            System.out.print(x + " ");
         }
+        System.out.println();
     }
 
     public ArrayList<Integer> getprefsum(ArrayList<Integer> input) {
@@ -403,53 +413,500 @@ class Solution {
     }
 
     public void printFrom1toA_23_4(int A) {
-        if(A==1) {
+        if (A == 1) {
             System.out.print("1");
-        }
-        else{
-            printFrom1toA_23_4(A-1);
+        } else {
+            printFrom1toA_23_4(A - 1);
             System.out.print(" ");
             System.out.print(A);
         }
 
     }
 
+    int solve_Test2(int A, int B) {
+        long res = 0;
+        for (int i = B; i < A + B; i++) {
+            res += Math.pow(2, i);
+
+        }
+        return (int) res;
+    }
+
+    public int SubArraywithLeastAvg12_1(int[] A, int B) {
+        int l = A.length;
+        int sum = 0, idx = 0;
+        float avg = 0;
+        for (int i = 0; i < B; i++) {
+            sum += A[i];
+        }
+        avg = (float) sum / B;
+//        System.out.println(avg);
+        for (int i = 1; i <= l - B; i++) {
+            sum -= A[i - 1];
+            sum += A[i + B - 1];
+            if (avg > (float) sum / B) {
+                avg = (float) sum / B;
+                idx = i;
+            }
+        }
+        return idx;
+    }
+
+    public int[] maximumPositivity(int[] A) {
+        int strt_idx = 0, cnt = 0, max_cnt = 0, res_idx = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] >= 0) {
+                if (cnt == 0) {
+                    strt_idx = i;
+                }
+                cnt += 1;
+                if (cnt > max_cnt) {
+                    res_idx = strt_idx;
+                    max_cnt = cnt;
+                }
+            } else {
+                cnt = 0;
+            }
+        }
+//        System.out.println(res_idx +" "+ max_cnt);
+        int[] res = new int[max_cnt];
+        for (int i = 0; i < max_cnt; i++) {
+            res[i] = A[res_idx + i];
+//            System.out.println(i + " ");
+        }
+        return res;
+    }
+
+    public long bitWiseOr(int A, int[] B) {
+        long sum = 0;
+        int[] prefSUm = getprefsum(B);
+        for (int i = 0; i < A; i++) {
+            for (int j = i; j < A; j++) {
+                if (getsum(prefSUm, i, j) > 0) sum += 1;
+            }
+        }
+        return sum;
+    }
+
+    public int isMagic(int A) {
+        if (A / 10 == 0) {
+            return A;
+        } else {
+            int res = A % 10 + isMagic(A / 10);
+            System.out.println("res is " + res);
+            if (res / 10 != 0) {
+                res = isMagic(res);
+            }
+            return res;
+
+        }
+    }
+
+    public int JosephsRecurssion(ArrayList<Integer> A, int B, int strt) {
+        int l = A.size();
+        if (l == 1) return A.get(0);
+        int idx = strt;
+        idx = strt > l - 1 ? 0 : strt;
+        idx += B - 1;
+        idx = idx > l - 1 ? idx %= l : idx;
+        A.remove(idx);
+//        printArrayList(A);
+        return JosephsRecurssion(A, B, idx);
+
+    }
+
+    ;
+
+    //    public int kthSymbol(ArrayList<ArrayList<Integer>> ipLst, int curr_row, int )
+    public int colorful21(int A) {
+        ArrayList<Integer> input_arr = new ArrayList<Integer>();
+        while (A > 0) {
+            input_arr.add(A % 10);
+            A /= 10;
+        }
+        HashMap<Integer, Integer> ans = new HashMap<>();
+        int l = input_arr.size();
+        for (int i = 0; i < l; i++) {
+            for (int j = i; j < l; j++) {
+
+                int mul = 1;
+                for (int k = i; k <= j; k++) {
+                    mul *= input_arr.get(k);
+                    System.out.print(input_arr.get(k) + " ");
+                }
+                System.out.println();
+                if (ans.get(mul) != null) return 0;
+                ans.put(mul, 1);
+
+            }
+        }
+        return 1;
+    }
+
+    public int solve_1(int[] A) {
+        int idx = 0, l = A.length;
+        int count = 1, idx_strt = 0, top_count = 0, res_idx = 0;
+        for (int i = 1; i < l; i++) {
+            if (A[i - 1] < A[i]) {
+                count += 1;
+                if (i == l - 1 & count > top_count)
+                    top_count = count;
+            } else {
+                if (count > top_count) {
+                    top_count = count;
+                    res_idx = idx_strt;
+                }
+                count = 1;
+                idx_strt = i;
+            }
+        }
+        System.out.println(res_idx + " " + top_count);
+        return top_count;
+    }
+
+    public int solve_x(String[] A) {
+        HashMap<Integer, Integer> res = new HashMap<>();
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length(); j++) {
+                res.put((int) A[i].charAt(j), 1);
+            }
+        }
+        for (int i = 97; i <= 122; i++) if (res.get(i) == null) return 0;
+        return 1;
+    }
+
+    public int[] solve_3(String A, int[][] B) {
+        int res[] = new int[B.length];
+        int countarr[] = new int[A.length()];
+        int count = 0;
+        for (int i = 0; i < A.length(); i++) {
+            char c = A.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') count += 1;
+            countarr[i] = count;
+        }
+
+        for (int j = 0; j < B.length; j++) {
+            if (B[j][0] == 0) res[j] = countarr[B[j][1]];
+            else res[j] = countarr[B[j][1]] - countarr[B[j][0] - 1];
+
+        }
+        printArray(res);
+        return res;
+
+    }
+
+    public int solve_4(TreeNode A, TreeNode B) {
+        if (A == null & B == null) return 0;
+        if ((A == null & B != null) | (A != null & B == null)) return -1;
+
+        if (A.val == B.val) {
+            int res = 0;
+            if (A.left != null) {
+                if (A.right != null) {
+                    if (B.left == null | B.right == null) {
+                        return -1;
+                    } else {
+                        if (A.left.val == B.left.val && A.right.val == B.right.val) {
+                            int leftCheck = solve_4(A.left, B.left);
+                            int rightCheck = solve_4(A.right, B.right);
+                            if (leftCheck != -1 & rightCheck != -1) return leftCheck + rightCheck;
+                            else return -1;
+                        } else if (A.right.val == B.left.val && A.left.val == B.right.val) {
+                            int leftCheck = solve_4(A.left, B.left);
+                            int rightCheck = solve_4(A.right, B.right);
+                            if (leftCheck != -1 & rightCheck != -1) return 1 + leftCheck + rightCheck;
+                            else return -1;
+                        }
+                        return -1;
+
+                    }
+                }
+
+
+            }
+        } else {
+            return -1;
+        }
+        return 1;
+    }
+
+    public int[] solve(int A, int[][] B) {
+        int[] res = new int[A];
+        int l = B.length, sum = 0;
+        for (int i = 0; i < l; i++) {
+            res[B[i][0] - 1] += B[i][2];
+            if (B[i][1] <= A - 1) {
+                res[B[i][1]] -= B[i][2];
+            }
+        }
+
+        for (int i = 0; i < l; i++) {
+            sum += res[i];
+            res[i] = sum;
+        }
+        printArray(res);
+        return res;
+
+    }
+
+    public int trap33(final int[] A) {
+        int s = A.length, sum = 0;
+        int maxl = 0, maxr = 0;
+        int[] l = new int[s];
+        int[] r = new int[s];
+        l[0] = 0;
+        r[s - 1] = 0;
+        for (int i = 1; i < s; i++) {
+            if (A[i - 1] > maxl) {
+                maxl = A[i - 1];
+            }
+            if (A[i] >= maxl) maxl = 0;
+            l[i] = maxl;
+        }
+//        printArray(l);
+        for (int i = s - 2; i >= 0; i--) {
+            if (A[i + 1] > maxr) {
+                maxr = A[i + 1];
+            }
+            if (A[i] >= maxr) maxr = 0;
+            r[i] = maxr;
+        }
+//        printArray(r);
+        for (int i = 0; i < s; i++) {
+            sum += Math.min(l[i], r[i]) - A[i] > 0 ? Math.min(l[i], r[i]) - A[i] : 0;
+//            System.out.print(Math.min(l[i],r[i]) + " ");
+        }
+        return sum;
+    }
+
+    public int firstMissingPositive(int[] A) {
+        int counter = 0, temp = 0, res = 1, l = A.length;
+        while (counter < l) {
+            if ((A[counter] > 0) & (A[counter] < l + 1) & (A[counter] != counter + 1)) {
+                if (A[counter] != A[A[counter] - 1]) {
+                    temp = A[counter];
+                    A[counter] = A[temp - 1];
+                    A[temp - 1] = temp;
+                } else counter++;
+
+            } else {
+                counter++;
+            }
+        }
+        for (int i = 0; i < l; i++) {
+            if (A[i] != i + 1) break;
+            else res++;
+        }
+        return res;
+//        printArray(A);
+//        System.out.println(res);
+    }
+
+    public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+        int l = intervals.size(), s = 0, e = l-2, si, ei, nsi, nei;
+        if(l <2) return intervals;
+        ArrayList<Interval> res = new ArrayList<>();
+        Collections.sort(intervals, new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                return o1.start-o2.start;
+            }
+        });
+        while(s<=e){
+            si = intervals.get(s).start;
+            ei = intervals.get(s).end;
+            nsi = intervals.get(s+1).start;
+            nei = intervals.get(s+1).start;
+
+            if(ei>nsi){
+                intervals.get(s+1).end = Math.max(ei,nei);
+                intervals.get(s+1).start = Math.min(si,nsi);
+                s++;
+            }
+            else res.add(intervals.get(s));
+            s++;
+
+        }
+
+        return res;
+    }
+
+    public int findMaxAn(ArrayList<Integer> A) {
+        int sum = 0;
+        for(int i = 31;i>=0;i--){
+            int count = 0;
+            for(int j = 0; j<A.size(); j++){
+                if((A.get(j) & (1<<i)) != 0) count++;
+            }
+            if (count > 1){
+                sum += Math.pow(2,i);
+                for(int k = 0; k < A.size(); k++){
+                    if((A.get(k) & (1<<i)) == 0) A.set(k,0);
+                }
+            }
+        }
+        return sum;
+    }
 }
+
 
 
 class Assignments {
     public static void main(String[] args) {
         Solution x = new Solution();
-//        System.out.println((-40) % 7);
-        ArrayList<ArrayList<Integer>> input_2d = new ArrayList(Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(7, 8, 9)));
-        int[] input_arr = new int[]{3, 30, 34, 5, 9};
-        boolean row[] = new boolean[2];
-        x.printFrom1toA_23_4(77);
-        System.out.println();
+//        x.firstMissingPositive(new int[]{4, 2, 1, -5, 3, 5});
+        System.out.println(9&(1<<0));
 
-//        System.out.println();
+//        System.out.println(x.trap33(new int[]{1, 2}));
+//        System.out.println(null == null);
+
+//        x.solve_3("scaler", new int[][]{{0, 2}, {2, 4}});
+//        x.solve(5,new int[][]{{1, 2, 10},  {2, 3, 20},  {2, 5, 25}});
+//        System.out.println((int) "z".charAt(0));
+//        x.solve_1(new int[]{16,3,3,6,7,8,17,13,7});
+//        Sysem.out.println(x.colorful21(12));
+//        x.maximumPositivity(new int[]{5, 6, 7, -2, 8, 9, 0, 1});
+//        System.out.println(x.bitWiseOr(3,new int[]{1,0,1}));
+//        System.out.println((long)Math.pow(2,4)-1);
+//        System.out.println(4 & 1);
+
+        ArrayList<ArrayList<Integer>> input_2d = new ArrayList(Arrays.asList(Arrays.asList(1, 2, 10), Arrays.asList(2, 3, 20), Arrays.asList(2, 5, 25)));
+        int[] input_arr = new int[]{6, 9, 9, 8};
+        ArrayList<Integer> input_Joseph = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> ip = new ArrayList<ArrayList<Integer>>();
+
+
+//        ArrayList<Integer> fl = new ArrayList<>();
+//        fl.add(0);
+//        ip.add(fl);
+
+
+//        for(int i = 1; i<=10;i++){
+//            input_Joseph.add(i);
+//        }
+//        System.out.println(x.JosephsRecurssion(input_Joseph,8,0));
+//        System.out.println(x.isMagic(83557));
+
+
+//        System.out.println(x.SubArraywithLeastAvg12_1(new int[]{ 20, 1, 5, 2, 7, 5, 17  },6));
+//        System.out.println(x.solve_Test2(5,4));
+//        x.printFrom1toA_23_4(77);
 //        x.LongestSubArrayZeroSum22_1(new int[]{5, -3, 2, 1, 0});
-//        int[] input_arr = new int[]{1,2,3,4,5,6,7,8,9};
 //        x.rotatemat(input_2d);
 //        x.specialIndex15_3(input_arr);
 //        x.majorityElement15_4(input_arr);
 //x.consecutive1s13_2("00000011111111");
 //        System.out.println(x.goodsubarray(new ArrayList(Arrays.asList(1, 2, 3, 4, 5)), 4));
-
 //        System.out.println(x.pickboth(new int[]{5,-2,3,1,2},3));
-
-
 //        new Solution().maxProfit(new int[]{1,2,3,4,5});
 //        x.powerWithModulo18_1(637759701,48998,296839866);
-
 //        x.modArray18_2(new int[]{ 8, 2, 5, 6, 7, 6, 2, 6, 2 }, 3);
 //        x.largestNumber(input_arr);
 //        HashMap<Integer,List<Integer>> hm = new HashMap<>();
 //        hm.put(0, Arrays.asList(0,1));
 //        System.out.println(hm.get(2));
 //        List<Integer> newval = hm.get(2) != null?Arrays.asList(2):;
-
-        char tst = 97;
+//        char tst = 97;
 //        System.out.println(tst);
     }
 }
+
+
+class Matrix {
+
+
+    // Define properties here
+    int row, column;
+    int[][] mat;
+
+    // Define constructor here
+    Matrix(int r, int c) {
+        this.row = r;
+        this.column = c;
+        this.mat = new int[r][c];
+    }
+
+    void input(Scanner sc) {
+        // Use the Scanner object passed as argument for taking input and not a new Scanner object
+        for (int i = 0; i < this.row; i++) {
+            String ip = sc.nextLine();
+            String[] ele = ip.split(" ");
+            for (int j = 0; j < this.column; j++) {
+                this.mat[i][j] = Integer.parseInt(ele[j]);
+
+            }
+        }
+        // Complete the function
+
+    }
+
+    Matrix add(Matrix x) {
+        // Complete the function
+        Matrix res = new Matrix(this.row, this.column);
+        for (int i = 0; i < this.row; i++) {
+            for (int j = 0; j < this.column; j++) {
+                res.mat[i][j] = this.mat[i][j] + x.mat[i][j];
+            }
+        }
+        return res;
+
+    }
+
+    Matrix subtract(Matrix x) {
+        // Complete the function
+        Matrix res = new Matrix(this.row, this.column);
+        for (int i = 0; i < this.row; i++) {
+            for (int j = 0; j < this.column; j++) {
+                res.mat[i][j] = this.mat[i][j] - x.mat[i][j];
+            }
+        }
+        return res;
+
+    }
+
+    Matrix transpose() {
+        // Complete the function
+        Matrix res = new Matrix(this.row, this.column);
+        for (int i = 0; i < this.row; i++) {
+            for (int j = 0; j < this.column; j++) {
+                res.mat[i][j] = this.mat[j][i];
+            }
+        }
+        return res;
+
+    }
+
+    void print() {
+        // Complete the function
+        for (int i = 0; i < this.row; i++) {
+            for (int j = 0; j < this.column; j++) {
+                System.out.print(this.mat[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        this.val = x;
+        this.left = null;
+        this.right = null;
+    }
+}
+/*
+    Matrix a = new Matrix(10, 5)  // 10 rows, 5 columns
+	a.input()
+	Matrix b = new Matrix(10, 5)  // 10 rows, 5 columns
+	b.input()
+    Matrix c1 = a.add(b)
+    Matrix c2 = a.subtract(b)
+    Matrix c3 = a.transpose()
+    a.print()
+*/
