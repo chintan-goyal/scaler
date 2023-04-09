@@ -1,28 +1,19 @@
-import java.util.*;
+package util;
 
-class LargestNumberComparator implements Comparator<Integer> {
-    public int compare(Integer a, Integer b) {
-        String ab = a.toString() + b.toString();
-        String ba = b.toString() + a.toString();
-        if (Double.parseDouble(ab) > Double.parseDouble(ba)) {
-            return -1;
-        } else if (a == b) {
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-}
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-class Solution {
+public class Solution {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
-    public void printArrayList(ArrayList<Integer> a) {
+    public static void printArrayList(ArrayList<Integer> a) {
         for (int x : a) {
             System.out.println(x);
         }
     }
 
-    public void printArray(int[] A) {
+    public static void printArray(int[] A) {
         System.out.println("Printing the list");
         for (int x : A
         ) {
@@ -30,7 +21,7 @@ class Solution {
         }
     }
 
-    public ArrayList<Integer> getprefsum(ArrayList<Integer> input) {
+    public static ArrayList<Integer> getprefsum(ArrayList<Integer> input) {
         ArrayList<Integer> res = new ArrayList<>();
         int sum = 0;
         for (int i = 0; i < input.size(); i++) {
@@ -40,7 +31,7 @@ class Solution {
         return res;
     }
 
-    public int[] getprefsum(int[] input) {
+    public static int[] getprefsum(int[] input) {
         int[] res = new int[input.length];
         int sum = 0;
         for (int i = 0; i < input.length; i++) {
@@ -50,7 +41,7 @@ class Solution {
         return res;
     }
 
-    public int getsum(int[] pref, int start_idx, int end_idx) {
+    public static int getsum(int[] pref, int start_idx, int end_idx) {
         if (start_idx > end_idx) {
             return 0;
         }
@@ -61,7 +52,7 @@ class Solution {
         }
     }
 
-    public int getsum(ArrayList<Integer> pref, int start_idx, int end_idx) {
+    public static int getsum(ArrayList<Integer> pref, int start_idx, int end_idx) {
         if (start_idx > end_idx) {
             return 0;
         }
@@ -665,108 +656,62 @@ class Solution {
         return res;
     }
 
+    public int ncr_39_np(int A, int B, int C) {
+        int[][] mat = new int[A][B];
+        mat[0][0] = 1;
+        for (int i = 1; i < A; i++) {
+            for (int j = 0; j < B; j++) {
+                mat[i][j] = j - 1 >= 0 & j <= i ? (mat[i - 1][j - 1] + mat[i - 1][j]) % C : (mat[i - 1][j] + 1) % C;
+            }
+        }
+        return mat[A - 1][B - 1];
+    }
+
+    public static int getFactorial(int A, int p) {
+        long fac = 1;
+        for (int i = 1; i <= A; i++) {
+            fac = (fac * i + p) % p;
+        }
+        return (int) fac % p;
+    }
+
+
+    public static int getPow(int A, int B, int P) {
+        long res = 1;
+        if (B == 0) return 1;
+        if (A == 1) return 1;
+        if (B == 1) return A % P;
+        long half = getPow(A, B / 2, P);
+        long ans = getMultiModuled(half, half, P);
+        res = B % 2 == 0 ? ans : getMultiModuled(ans, A, P);
+        return (int) res;
+
+    }
+
+    public static int getMultiModuled(long A, long B, long C) {
+        return (int) ((A * B + C) % C);
+    }
+
+    public int solve(int A, int B, int C) {
+        return getMultiModuled(getMultiModuled(getFactorial(A, C), getPow(getFactorial(A - B, C), C - 2, C), C), getPow(getFactorial(B, C), C - 2, C), C);
+    }
+
     public String convertToTitle(int A) {
         ArrayList<Integer> st = new ArrayList<>();
         int base = 26;
         StringBuilder sb = new StringBuilder();
-        while (A / base > 0) {
-            st.add(A % base);
-            A /= base;
+
+        while ((A - 1) / base > 0) {
+            st.add((A - 1) % base);
+            A = (A - 1) / base;
         }
-        if (A % base != 0) st.add(A % base);
+        st.add((A - 1) % base);
+
         for (int i = st.size() - 1; i >= 0; i--) {
-            sb.append((char) (st.get(i) + 64));
+            char c = (char) (st.get(i) + 65);
+            sb.append(c);
         }
-        printArrayList(st);
+//        printArrayList(st);
         return sb.toString();
-    }
-
-    public int ncr_39_np(int A, int B, int C) {
-        int[][] mat = new int[A][B];
-        mat[0][0] = 1;
-        for(int i = 1;i<A;i++){
-            for(int j = 0;j<B;j++){
-                    mat[i][j] = j-1 >= 0 & j<=i ? (mat[i-1][j-1] + mat[i-1][j])%C:(mat[i-1][j] + 1)%C;
-            }
-        }
-        return mat[A-1][B-1];
-    }
-    public int ncr_39_p(int A, int B, int C) {
-
-    }
-}
-
-class Assignments {
-    public static void reverseString(String A, int idx) {
-        int l = A.length();
-        if (idx == 0) {
-            System.out.print(A.charAt(idx));
-            ;
-        } else {
-            System.out.print(A.charAt(idx));
-            reverseString(A, idx - 1);
-        }
-    }
-
-    public static void main(String[] args) {
-        Solution x = new Solution();
-        System.out.println(x.ncr(5, 2, 13));
-//        System.out.println(x.convertToTitle(943566));
-//        x.bitWiseOr1(3,new int[]{1,0,1});
-//        x.commonElements21(new int[]{1,2,2,1
-//        },new int[]{2,3,1,2});
-//        x.littlePonyAndTwoSubsequence("ksdjgha");
-
-//        System.out.println((-40) % 7);
-        ArrayList<ArrayList<Integer>> input_2d = new ArrayList(Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(7, 8, 9)));
-        int[] input_arr = new int[]{1, 2, 3, 4, 5, 6, 7};
-//        x.printArrayList(x.getPrime(20));
-//        boolean row[] = new boolean[2];
-//        Scanner sc;
-//        System.out.println(x.christmasTree13_2(new int[]{ 5, 9, 10, 4, 7, 8 },new int[]{5, 6, 4, 7, 2, 5}));
-//        sc = new Scanner(System.in);
-//        String ip = sc.nextLine();
-//        reverseString(ip,ip.length()-1);
-//        System.out.println(foo(3,5));
-
-
-//
-//        x.multipleLeftRotation(input_arr, new int[]{2, 4});
-//        x.reverseArray(input_arr, 1, 4);
-//        x.printArray(input_arr);
-//        x.printArray(input_arr);
-//        System.out.println(x.pow25_2(71045970, 41535484, 64735492));
-
-//        x.alternatingSubarray10_HW_1(new ArrayList<Integer>(Arrays.asList(0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0)), 0);
-//        System.out.println(x.checkPalindrome23_3("naman"));
-
-//        x.printFrom1toA_23_4(77);
-//        System.out.println();
-//        String ab = "Hello are you there";
-
-//        System.out.println();
-//        x.LongestSubArrayZeroSum22_1(new int[]{5, -3, 2, 1, 0});
-//        int[] input_arr = new int[]{1,2,3,4,5,6,7,8,9};
-//        x.rotatemat(input_2d);
-//        x.specialIndex15_3(input_arr);
-//        x.majorityElement15_4(input_arr);
-//x.consecutive1s13_2("00000011111111");
-//        System.out.println(x.goodsubarray(new ArrayList(Arrays.asList(1, 2, 3, 4, 5)), 4));
-
-//        System.out.println(x.pickboth(new int[]{5,-2,3,1,2},3));
-
-
-//        new Solution().maxProfit(new int[]{1,2,3,4,5});
-//        x.powerWithModulo18_1(637759701,48998,296839866);
-
-//        x.modArray18_2(new int[]{ 8, 2, 5, 6, 7, 6, 2, 6, 2 }, 3);
-//        x.largestNumber(input_arr);
-//        HashMap<Integer,List<Integer>> hm = new HashMap<>();
-//        hm.put(0, Arrays.asList(0,1));
-//        System.out.println(hm.get(2));
-//        List<Integer> newval = hm.get(2) != null?Arrays.asList(2):;
-//        char tst = 9;
-//        System.out.println(25 ^ 0);
-//        System.out.println(tst);
     }
 }

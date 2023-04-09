@@ -4,19 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a3885b8-e2b3-411a-90e8-888a10237559" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1a3885b8-e2b3-411a-90e8-888a10237559" name="Changes" comment="Updated Assignments">
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day39.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day40.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day41.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day42.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day44.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day45.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Scaler/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Scaler/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scaler/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scaler/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Assignments.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -27,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,6 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSUSERSL123/IdeaProjects/Scaler/src/assignments&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -48,49 +56,94 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Assignments (3)">
-    <configuration name="Assignments (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignments" />
-      <module name="Scaler" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Assignments (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignments" />
-      <module name="Scaler" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MSUSERSL123\IdeaProjects\Scaler\src\assignments" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="assignments" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Day45">
     <configuration name="Assignments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignments" />
+      <option name="MAIN_CLASS_NAME" value="util.Assignments" />
       <module name="Scaler" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HelloWorld" />
+    <configuration name="Day39" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day39" />
       <module name="Scaler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing" />
+    <configuration name="Day41" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day41" />
       <module name="Scaler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day42" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day42" />
+      <module name="Scaler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day44" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day44" />
+      <module name="Scaler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day45" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day45" />
+      <module name="Scaler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Assignments (3)" />
-        <item itemvalue="Application.testing" />
-        <item itemvalue="Application.Assignments" />
-        <item itemvalue="Application.HelloWorld" />
-        <item itemvalue="Application.Assignments (2)" />
+        <item itemvalue="Application.Day45" />
+        <item itemvalue="Application.Day44" />
+        <item itemvalue="Application.Day42" />
+        <item itemvalue="Application.Day39" />
+        <item itemvalue="Application.Day41" />
       </list>
     </recent_temporary>
   </component>
@@ -103,6 +156,14 @@
       <option name="presentableId" value="Default" />
       <updated>1674020363722</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated Assignments">
+      <created>1679986942718</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679986942718</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,13 +177,22 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated Assignments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Assignments" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Assignments.java</url>
-          <line>726</line>
+          <url>file://$PROJECT_DIR$/src/util/Assignments.java</url>
+          <line>750</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/assignments/Day45.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
