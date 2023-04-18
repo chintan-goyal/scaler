@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a3885b8-e2b3-411a-90e8-888a10237559" name="Changes" comment="Updated Assignments">
-      <change afterPath="$PROJECT_DIR$/src/assignments/Day39.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignments/Day40.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignments/Day41.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignments/Day42.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignments/Day44.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignments/Day45.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/Solution.java" afterDir="false" />
+    <list default="true" id="2fcec7fb-88f9-43c9-b864-abb22322394f" name="Changes" comment="Assignment update">
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day00.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day46.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day47.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day48.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assignments/Day49.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Scaler/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Assignments.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,7 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,7 +41,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSUSERSL123/IdeaProjects/Scaler/src/assignments&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Chintan/IdeaProjects/Scaler/src/assignments&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -58,35 +51,29 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MSUSERSL123\IdeaProjects\Scaler\src\assignments" />
+      <recent name="C:\Users\Chintan\IdeaProjects\Scaler\src\assignments" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="assignments" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day45">
+  <component name="RunManager" selected="Application.Day49">
+    <configuration name="Assignments (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignments" />
+      <module name="Scaler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Assignments" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="util.Assignments" />
+      <option name="MAIN_CLASS_NAME" value="Assignments" />
       <module name="Scaler" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day39" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignments.Day39" />
-      <module name="Scaler" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="assignments.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day41" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignments.Day41" />
+    <configuration name="Day46" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day46" />
       <module name="Scaler" />
       <extension name="coverage">
         <pattern>
@@ -98,8 +85,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day42" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignments.Day42" />
+    <configuration name="Day48" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day48" />
       <module name="Scaler" />
       <extension name="coverage">
         <pattern>
@@ -111,21 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day44" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignments.Day44" />
-      <module name="Scaler" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="assignments.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day45" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="assignments.Day45" />
+    <configuration name="Day49" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assignments.Day49" />
       <module name="Scaler" />
       <extension name="coverage">
         <pattern>
@@ -139,31 +113,52 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Day45" />
-        <item itemvalue="Application.Day44" />
-        <item itemvalue="Application.Day42" />
-        <item itemvalue="Application.Day39" />
-        <item itemvalue="Application.Day41" />
+        <item itemvalue="Application.Day49" />
+        <item itemvalue="Application.Day48" />
+        <item itemvalue="Application.Assignments" />
+        <item itemvalue="Application.Day46" />
+        <item itemvalue="Application.Assignments (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1a3885b8-e2b3-411a-90e8-888a10237559" name="Changes" comment="" />
+      <changelist id="2fcec7fb-88f9-43c9-b864-abb22322394f" name="Changes" comment="" />
       <created>1674020363722</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674020363722</updated>
     </task>
-    <task id="LOCAL-00001" summary="Updated Assignments">
-      <created>1679986942718</created>
+    <task id="LOCAL-00001" summary="Assignment update">
+      <created>1675617567390</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1679986942718</updated>
+      <updated>1675617567390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Assignment update">
+      <created>1676295346112</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676295346112</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Assignment update">
+      <created>1676561526364</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676561526364</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Assignment update">
+      <created>1681033235673</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681033235673</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,28 +173,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated Assignments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Assignments" />
+    <MESSAGE value="Assignment update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/util/Assignments.java</url>
-          <line>750</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/assignments/Day46.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/assignments/Day45.java</url>
-          <line>150</line>
-          <option name="timeStamp" value="9" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/assignments/Day46.java</url>
+          <line>110</line>
+          <properties class="assignments.Day46" method="solve">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="A.charAt(i)" language="JAVA" />
-      </configuration>
-    </watches-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
