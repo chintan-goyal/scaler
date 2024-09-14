@@ -1,3 +1,8 @@
+import com.scaler.lld.designPatterns.ConnectionPool;
+import com.scaler.lld.designPatterns.ConnectionPoolImpl;
+import com.scaler.lld.designPatterns.DatabaseConnection;
+import com.scaler.lld.designPatterns.builder.Student;
+
 class Solution2 {
 
     public int[][] solve(int[] A,int B,int C) {
@@ -125,8 +130,21 @@ class Solution2 {
 
 class HelloWorld {
     public static void main(String[] args) {
+//        ConnectionPool con = ConnectionPoolImpl.getInstance(3);
+//        System.out.println(con.getAvailableConnectionsCount());
+//        DatabaseConnection a = con.getConnection();
+//        DatabaseConnection b = con.getConnection();
+//        System.out.println(con.getAvailableConnectionsCount());
+//        DatabaseConnection c = con.getConnection();
+//        System.out.println(con.getAvailableConnectionsCount());
+//        con.releaseConnection(a);
+//        System.out.println(con.getAvailableConnectionsCount());
 
-        Solution2 sol = new Solution2();
+        Student s = Student.getBuilder().setAge1(14).build();
+        System.out.println(s.age);
+
+//        Solution2 sol = new Solution2();
+
 
 
 //        sol.solve(new int[]{1,2,3},1,3);
@@ -134,7 +152,7 @@ class HelloWorld {
 //        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1,132,756,459,533,219,48,679,680,935,384,520,831,35,54,530,672,8,384,67,418,687,589,931,847,527,92,654,416,702,911,763,263,48,737,329,633,757,992,366,248,983,723,754,652,73,632,885,273,437,767,478,238,275,360,167,487,898,910,61,905,505,517,320,987,494,267,91,948,74,501,385,278,914,530,465,941,51,762,771,828,126,16,689,869,630,737,726,1000,889,234,307,352,514,592,846,413,842,270,416));
 //        int[] arr1 = new int[]{1,132,756,459,533,219,48,679,680,935,384,520,831,35,54,530,672,8,384,67,418,687,589,931,847,527,92,654,416,702,911,763,263,48,737,329,633,757,992,366,248,983,723,754,652,73,632,885,273,437,767,478,238,275,360,167,487,898,910,61,905,505,517,320,987,494,267,91,948,74,501,385,278,914,530,465,941,51,762,771,828,126,16,689,869,630,737,726,1000,889,234,307,352,514,592,846,413,842,270,416};
 //        sol.prod(arr1);
-        sol.specialIndex(new int[]{2,1,6,4});
+//        sol.specialIndex(new int[]{2,1,6,4});
 
 
 

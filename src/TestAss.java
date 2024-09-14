@@ -1,7 +1,23 @@
+import java.io.*;
+
 public class TestAss {
 
-        public static void main (String[]args){
+        public static void main (String[]args) throws IOException {
             System.out.println("hi");
+            FileWriter fw = new FileWriter("/Users/chintan/Personal/Learning/repos/scaler/src/test.txt",false);
+
+
+            PrintWriter pw = new PrintWriter(fw,false);
+            pw.println("hello dear");
+            pw.println("this is hey");
+            pw.append("what's up now");
+//            pw.flush();
+//            fw.flush();
+
+            pw.println("What's up");
+            pw.close();
+            fw.close();
+
         }
 
 
